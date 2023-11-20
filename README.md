@@ -31,4 +31,48 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Build docker image (Inte en del av kursen)
 
-docker build -t grubesic/angular-shop .
+`docker build -t grubesic/angular-shop .`
+
+
+## Wireguard (Inte en del av kursen)
+
+Stop Wireguard:
+`sudo wg-quick down wg0`
+
+Start Wireguard:
+`sudo wg-quick up wg0`
+
+Wireguard status:
+`sudo wg show`
+
+Wireguard config:
+`sudo less /etc/wireguard/wg0.conf`
+
+VPS config:
+```
+[Interface]
+Address = 10.6.0.1/24
+ListenPort = 53916
+PrivateKey = <vps-privatekey>
+
+[Peer]
+PublicKey = <client-publickey>
+AllowedIPs = 10.6.0.2/32
+```
+
+Client-config
+
+```
+[Interface]
+Address = 10.6.0.2/32
+PrivateKey = <client-privatekey>
+
+[Peer]
+PublicKey = <vps-publickey>
+Endpoint = <vps-host-ip>:53916
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25
+```
+
+
+
