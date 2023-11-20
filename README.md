@@ -1,5 +1,7 @@
 # AngularShop
 
+Länk till kursmaterial: https://docs.google.com/document/d/1eqOHko0CQ5R275fez4h43bAdRF6rg5gIdnRO2cJ4Svc/edit
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
 ## Development server
@@ -27,6 +29,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-## Build docker container (Inte en del av kursen)
+## Build docker image (Inte en del av kursen)
 
 docker build -t grubesic/angular-shop .
