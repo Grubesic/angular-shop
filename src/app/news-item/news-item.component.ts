@@ -1,11 +1,12 @@
 import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DisplayModeService} from "../display-mode.service";
+import {CutTextPipe} from "../cut-text.pipe";
 
 @Component({
   selector: 'app-news-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CutTextPipe],
   templateUrl: './news-item.component.html',
   styleUrl: './news-item.component.css'
 })

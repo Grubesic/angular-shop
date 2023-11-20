@@ -1,6 +1,6 @@
 <div class="box">
   <div *ngIf="headerVisible">
-    <h2>{{header}}</h2>
+    <h2>{{header | cutText:40}}</h2>
   </div>
 
   <button *ngIf="!detailsVisible" (click)="compactView(true)">Show details</button>
