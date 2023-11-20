@@ -1,4 +1,4 @@
 
-<img *ngIf="!fullWidth" [ngClass]="{'border': hasBorder}"  class="compact" src="/assets/pandas/eating.webp" alt="panda">
+<img [ngClass]="{'border': hasBorder, 'full-width': fullWidth, 'compact': !fullWidth}" class="full-width" src="/assets/{{filename}}">
 
-<img *ngIf="fullWidth" [ngClass]="{'border': hasBorder}" class="full-width" src="/assets/pandas/eating.webp" alt="panda full width">
+

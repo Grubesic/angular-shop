@@ -1,7 +1,10 @@
 <h1>Recipe</h1>
 
-<p>
-  <b>Name: </b> {{name}}<br><br>
-  <b>Description: </b>{{description}}
-</p>
+<div>
+  <app-thumbnail [fullWidth]="false" [hasBorder]="true" filename="{{filename}}"></app-thumbnail>
+  <p>
+    <b>Name: </b> {{name}}<br><br>
+    <b>Description: </b>{{description}}
+  </p>
+</div>
 

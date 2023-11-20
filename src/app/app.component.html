@@ -1,4 +1,9 @@
 <h1>Hello</h1>
+
+<button (click)="isCompact(true)">Compact</button>
+<button (click)="isCompact(false)">Expand</button>
+
+
 <app-news-item header="Angular est framework programmationis in linguam 'JavaScript'"
                content="Angular est framework programmationis in linguam 'JavaScript' (vel 'TypeScript') scriptum, adhibeturque ad structuram applicationum web. Angular auxilium praebet in creando 'single-page applications' (SPA), quae sunt paginæ singulæ cum contentu dynamicus mutabilis sine paginarum refreshmento. Angular notus est pro eius 'data-binding', 'dependency injection', et 'directive' facultatibus. Angular, a comitatu 'Google' elaboratum, in multis projectis technologicis et commercialibus per orbem terrarum utitur.">
 
@@ -8,9 +13,9 @@
 
 </app-news-item>
 
-<app-thumbnail [fullWidth]="false" [hasBorder]="false"></app-thumbnail>
+<app-thumbnail [fullWidth]="false" [hasBorder]="true" filename="pandas/walking.png"></app-thumbnail>
 
-<app-thumbnail [fullWidth]="false" [hasBorder]="true"></app-thumbnail>
+<app-thumbnail [fullWidth]="false" [hasBorder]="true" filename="pandas/eating.webp"></app-thumbnail>
 
 
 
@@ -21,6 +26,7 @@
 
 <app-recipe
   name="Äppelpaj"
-  description="Sätt ugnen på 200 grader. Skölj äpplena och skär dem i tunna skivor" >
+  description="Sätt ugnen på 200 grader. Skölj äpplena och skär dem i tunna skivor"
+  filename="recipe/applepaj.webp">
 
 </app-recipe>

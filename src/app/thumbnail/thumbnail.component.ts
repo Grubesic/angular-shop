@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {DisplayModeService} from "../display-mode.service";
 
 @Component({
   selector: 'app-thumbnail',
@@ -13,4 +14,17 @@ export class ThumbnailComponent {
 
   @Input() hasBorder: boolean = false;
 
+  @Input() filename = "missing-image.webp";
+
+
+  constructor(private displayModeService: DisplayModeService) {
+    this.displayModeService.currentCompactStatus.subscribe({
+      next: (isCompact) => {
+        this.fullWidth = !isCompact;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
 }
