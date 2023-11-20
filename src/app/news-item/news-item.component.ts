@@ -13,4 +13,20 @@ export class NewsItemComponent {
   @Input() header = "";
   @Input() content = "";
 
+  detailsVisible = true;
+  headerVisible = true;
+
+
+  changeText() {
+    this.header = "Header changed";
+    this.content = "Content changed";
+  }
+
+  compactView(showDetails: boolean) {
+    this.detailsVisible = showDetails;
+  }
+
+  showHeader(b: boolean) {
+    this.headerVisible = b
+  }
 }

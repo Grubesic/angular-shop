@@ -1,4 +1,16 @@
-<div>
-  <h2>{{header}}</h2>
-  <p>{{content}}</p>
+<div class="box">
+  <div *ngIf="headerVisible">
+    <h2>{{header}}</h2>
+  </div>
+
+  <button *ngIf="!detailsVisible" (click)="compactView(true)">Show details</button>
+
+  <div *ngIf="detailsVisible">
+    <p>{{content}}</p>
+
+    <button (click)="changeText()">Change text</button>
+    <button (click)="compactView(false)">Compact view</button>
+  </div>
+  <button *ngIf="headerVisible" (click)="showHeader(false)">Hide header</button>
+  <button *ngIf="!headerVisible" (click)="showHeader(true)">Show header</button>
 </div>
