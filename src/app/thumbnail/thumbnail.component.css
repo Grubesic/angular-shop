@@ -1,0 +1,16 @@
+.full-width {
+  width: 100%;
+}
+
+.compact {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  padding: 5px;
+  margin: 5px;
+}
+
+.border{
+  border: solid 1px;
+  border-radius: 10px;
+}
