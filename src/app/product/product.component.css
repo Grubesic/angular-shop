@@ -21,7 +21,6 @@
   margin-top: 16px;
 }
 
-/* Hover effect for the button */
 .product .buy-button:hover {
-  background-color: #4d2405; /* Darker blue on hover */
+  background-color: #4d2405;
 }
