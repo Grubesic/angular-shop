@@ -1,0 +1,8 @@
+<div class="product" *ngIf="product">
+  <img [src]="'/assets/products/' + product.image">
+  <div class="details">
+    <h2>{{product.info}}</h2>
+    <p>{{product.details}} - {{product.price}} kr</p>
+    <button class="buy-button">Lägg till</button>
+  </div>
+</div>

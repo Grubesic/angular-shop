@@ -1,0 +1,27 @@
+.product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.product:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product .buy-button {
+  padding: 10px;
+  background-color: rgba(186, 74, 0, 0.94);
+  color: white; /* White text */
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 16px;
+}
+
+/* Hover effect for the button */
+.product .buy-button:hover {
+  background-color: #4d2405; /* Darker blue on hover */
+}
