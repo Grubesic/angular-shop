@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -33,4 +37,24 @@ ul.compact li {
   max-width:1450px;
   margin:0 auto;
 }
+/* This is your main container, which might be body or a div that wraps your entire content */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  flex: 1 0 auto; /* Ensures that the content expands to fill the space */
+}
+
+#footer {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
 

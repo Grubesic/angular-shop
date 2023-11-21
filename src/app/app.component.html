@@ -1,9 +1,19 @@
+<app-overlay></app-overlay>
 
-<div class="offer">
-  <h1>Veckans erbjudande</h1>
-  <app-product-list [products]="products"></app-product-list>
+<div id="page-container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main id="content-wrap">
+    <h1>Veckans erbjudande</h1>
+    <app-product-list [products]="products"></app-product-list>
+  </main>
+
+  <footer id="footer">
+    <app-footer></app-footer>
+  </footer>
 </div>
-
 
 <!--h1>Hello</h1>
 
