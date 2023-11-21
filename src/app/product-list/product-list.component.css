@@ -1,7 +1,13 @@
-.products{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: stretch;
+.header {
+  color: #242628;
+  font-size: 30px;
 }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 226px);  /*  226px 226px ... ett visst antal gånger */
+  grid-column-gap:40px;
+  grid-row-gap:10px;
+  justify-content: center;
+}
+

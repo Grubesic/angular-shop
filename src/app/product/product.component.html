@@ -1,8 +1,35 @@
-<div class="product" *ngIf="product">
-  <img [src]="'/assets/products/' + product.image">
-  <div class="details">
-    <h2>{{product.info}}</h2>
-    <p>{{product.details}} - {{product.price}} kr</p>
-    <button class="buy-button">Lägg till</button>
+<article class="product" *ngIf="product">
+  <div class="price">{{product.price}}:-</div>
+  <div class="description">
+    <div class="image">
+      <img [src]="'/assets/products/' + product.image">
+    </div>
+
+    <div class="campaign">{{product.campaignText}}</div>
+    <div class="info">{{product.info}}</div>
+    <div class="details">{{product.details}}</div>
+    <div class="co2" *ngIf="product.co2">
+      <div class="number">{{ product.co2 | number: '1.1-1' }}</div>
+      <div class="text">CO2e/kg</div>
+    </div>
+
+    <div class="compare">
+      Jfr pris {{ product.comparePricePerKg | zeroOrTwoDecimals }} kr/kg<br>
+      Ord pris {{ product.originalPrice | zeroOrTwoDecimals }} kr
+    </div>
+
   </div>
-</div>
+
+  <div class="buybuttons">
+    <div *ngIf="amount === 0" class="buybutton" (click)="adjustAmount(+1)">
+      Köp
+    </div>
+
+    <div *ngIf="amount >= 1" class="minusplus">
+      <img (click)="adjustAmount(-1)" src="/assets/img/icon-decrease-button-green.png">
+      <div>{{ amount }}</div>
+      <img (click)="adjustAmount(+1)" src="/assets/img/icon-increase-button-green.png">
+    </div>
+  </div>
+
+</article>

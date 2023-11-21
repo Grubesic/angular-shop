@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: sans-serif;
+}
+
+
+/* Debugging */
+
+div {
+  /* border:solid 1px;     */
+}
+
+ul.compact {
+  margin-left:0;
+  padding-left:0;
+}
+
+ul.compact li {
+  list-style:none;
+}
+
+/* Utilities */
+
+.hide {
+  display: none;
+}
+
+.centered {
+  max-width:1450px;
+  margin:0 auto;
+}
+
