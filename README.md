@@ -55,6 +55,12 @@ Address = 10.6.0.1/24
 ListenPort = 53916
 PrivateKey = <vps-privatekey>
 
+PostUp = iptables -t nat -A PREROUTING -p tcp -i ens6 --dport 80 -j DNAT --to-destination 10.6.0.2:80
+PostDown = iptables -t nat -D PREROUTING -p tcp -i ens6 --dport 80 -j DNAT --to-destination 10.6.0.2:80
+
+PostUp = iptables -t nat -A PREROUTING -p tcp -i ens6 --dport 443 -j DNAT --to-destination 10.6.0.2:80
+PostDown = iptables -t nat -D PREROUTING -p tcp -i ens6 --dport 443 -j DNAT --to-destination 10.6.0.2:80
+
 [Peer]
 PublicKey = <client-publickey>
 AllowedIPs = 10.6.0.2/32

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import {BehaviorSubject} from "rxjs";
 export class DisplayModeService {
 
   private isCompact: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  currentCompactStatus = this.isCompact.asObservable();
+  currentCompactStatus: Observable<boolean> = this.isCompact.asObservable();
 
   changeCompactStatus(isCompact: boolean) {
     this.isCompact.next(isCompact);

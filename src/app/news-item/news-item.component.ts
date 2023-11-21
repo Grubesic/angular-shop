@@ -21,7 +21,7 @@ export class NewsItemComponent {
 
   constructor(private displayModeService: DisplayModeService) {
     this.displayModeService.currentCompactStatus.subscribe({
-      next: (isCompact) => {
+      next: (isCompact: boolean) => {
         this.headerVisible = !isCompact;
         this.detailsVisible = !isCompact;
       },
