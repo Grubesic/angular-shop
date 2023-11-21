@@ -3,11 +3,12 @@ import {CommonModule} from '@angular/common';
 import {CartService} from '../cart.service';
 import {BehaviorSubject} from "rxjs";
 import {IProduct} from "../interfaces";
+import {ZeroOrTwoDecimalsPipe} from "../zero-or-two-decimals.pipe";
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ZeroOrTwoDecimalsPipe],
   templateUrl: './overlay.component.html',
   styleUrls: ['./overlay.component.css']
 })
@@ -40,5 +41,10 @@ export class OverlayComponent implements OnInit {
 
   totalPrice(){
     return this.cartService.totalPrice();
+  }
+
+
+  getAmount(id: number): number {
+   return this.cartService.getAmount(id);
   }
 }

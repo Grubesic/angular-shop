@@ -1,4 +1,7 @@
 # AngularShop
+![img_1.png](img_1.png)
+
+![img.png](img.png)
 
 Länk till kursmaterial: https://docs.google.com/document/d/1eqOHko0CQ5R275fez4h43bAdRF6rg5gIdnRO2cJ4Svc/edit
 

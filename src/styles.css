@@ -50,6 +50,7 @@ html, body {
 }
 
 #content-wrap {
+  margin-top: 20px;
   flex: 1 0 auto; /* Ensures that the content expands to fill the space */
 }
 

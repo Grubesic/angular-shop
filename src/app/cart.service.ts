@@ -102,4 +102,13 @@ export class CartService {
     }
     this.cart.next(newCart)
   }
+
+
+  getAmount(productId: number): number {
+    const cartItem = this.cart.value.find(c => c.id === productId)
+    if (!cartItem)
+      return 0
+    else
+      return cartItem.amount
+  }
 }
