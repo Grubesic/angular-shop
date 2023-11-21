@@ -1,0 +1,66 @@
+[
+    {
+        "id": "P100",
+        "price": 28,
+        "image": "halloumi.jpg",
+        "campaignText": "Spara 3,45 kr",
+        "info": "Halloumi",
+        "details": "Garant, 200g",
+        "co2": 9,
+        "comparePricePerKg": 142.5,
+        "originalPrice": 31.95
+    },
+    {
+        "id": "P101",
+        "price": 17,
+        "image": "pastasas-primavera.jpg",
+        "campaignText": "Kampanjvara",
+        "info": "Pastasås Primavera",
+        "details": "Garant, 400g",
+        "co2": 0.9,
+        "comparePricePerKg": 42.5,
+        "originalPrice": 19.95
+    },
+    {
+        "id": "P102",
+        "price": 17,
+        "image": "pastasas-arrabbiata.jpg",
+        "campaignText": "Kampanjvara",
+        "info": "Pastasås Tomat/chili",
+        "details": "Garant, 400g",
+        "comparePricePerKg": 42.5,
+        "originalPrice": 19.95
+    },
+    {
+        "id": "P103",
+        "price": 17,
+        "image": "pastasas-ricotta.jpg",
+        "campaignText": "Kampanjvara",
+        "info": "Pastasås Ost",
+        "details": "Garant, 400g",
+        "comparePricePerKg": 42.5,
+        "originalPrice": 19.95
+    },
+    {
+        "id": "P104",
+        "price": 5,
+        "image": "pasta-fusilli.jpg",
+        "campaignText": "Spara 8.95 kr",
+        "info": "Pasta Fusilli",
+        "details": "Barilla, 500g",
+        "co2": 1.4,
+        "comparePricePerKg": 10,
+        "originalPrice": 13.95
+    },
+    {
+        "id": "P105",
+        "price": 5,
+        "image": "pasta-gnocchi.jpg",
+        "campaignText": "Spara 8.95 kr",
+        "info": "Pasta Gnocchi",
+        "details": "Barilla, 500g",
+        "co2": 1.4,
+        "comparePricePerKg": 10,
+        "originalPrice": 13.95
+    }
+]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {NewsItemComponent} from "./news-item/news-item.component";
@@ -6,16 +6,21 @@ import {RecipeComponent} from "./recipe/recipe.component";
 import {ThumbnailComponent} from "./thumbnail/thumbnail.component";
 import {DisplayModeService} from "./display-mode.service";
 import {CutTextPipe} from "./cut-text.pipe";
+import {IProduct} from "./interfaces";
+import {ProductService} from "./product.service";
+import {ProductListComponent} from "./product-list/product-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NewsItemComponent, RecipeComponent, ThumbnailComponent, CutTextPipe],
+  imports: [CommonModule, RouterOutlet, NewsItemComponent, RecipeComponent, ThumbnailComponent, CutTextPipe, ProductListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angular-shop';
+
+  products: IProduct[] = [];
 
 
   readonly pandaText = "Once in a serene bamboo forest in the misty mountains of China, there lived a young panda named Ling. Unlike other pandas who spent their days leisurely munching on bamboo, Ling was known for her curious and adventurous spirit.\n" +
@@ -36,8 +41,19 @@ export class AppComponent {
     "\n" +
     "Ling's adventure taught her that wisdom comes from experience, courage, and the willingness to step into the unknown. Her story became a legend in the forest, inspiring generations of young pandas to explore, learn, and appreciate the vast and wonderful world around them. And so, Ling the panda became a symbol of curiosity, adventure, and wisdom, treasured not just in her forest, but in the hearts of all who heard her story.";
 
-  constructor(private displayModeService: DisplayModeService) {
+  constructor(private displayModeService: DisplayModeService, private productsService: ProductService) {
 
+  }
+
+  ngOnInit() {
+    this.productsService.getProducts().subscribe({
+      next: (products: IProduct[]) => {
+        this.products = products;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
 
   isCompact(isCompact: boolean) {

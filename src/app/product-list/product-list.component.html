@@ -1,0 +1,16 @@
+<h2>Product list component</h2>
+<p>{{products.length}} products</p>
+
+<div *ngIf="products.length >= 3">
+  <ul>
+    <li *ngFor="let product of products">
+      <h2>{{ product.info }}</h2>
+      <p>{{ product.details}}</p>
+      <!--img [src]="product.image"-->
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="products.length < 3">
+  <p>Product lists don’t contain three products</p>
+</div>
